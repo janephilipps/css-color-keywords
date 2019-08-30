@@ -3,7 +3,8 @@
   <head>
   </head>
   <body>
-    <canvas width="150" height="150" id="aliceblue"></canvas>
+    <canvas width="1000" height="800" id="canvas"></canvas>
+    <!-- <canvas width="150" height="150" id="aliceblue"></canvas>
     <canvas width="150" height="150" id="antiquewhite"></canvas>
     <canvas width="150" height="150" id="aqua"></canvas>
     <canvas width="150" height="150" id="aquamarine"></canvas>
@@ -150,7 +151,7 @@
     <canvas width="150" height="150" id="white"></canvas>
     <canvas width="150" height="150" id="whitesmoke"></canvas>
     <canvas width="150" height="150" id="yellow"></canvas>
-    <canvas width="150" height="150" id="yellowgreen"></canvas>
+    <canvas width="150" height="150" id="yellowgreen"></canvas> -->
     <script>
       const cssColorKeywords = [
         "aliceblue",
@@ -303,15 +304,31 @@
         "yellowgreen",
         ];
 
+        // Code to generate color squares for instagram images
+        // for (let i = 0; i < cssColorKeywords.length; i++) {
+
+        //   const canvas = document.getElementById(cssColorKeywords[i]);
+        //   const ctx = canvas.getContext('2d');
+
+        //   ctx.fillStyle = cssColorKeywords[i];
+        //   ctx.fillRect(0, 0, 150, 150);
+
+        // }
+
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        let width = 0;
         for (let i = 0; i < cssColorKeywords.length; i++) {
 
-          const canvas = document.getElementById(cssColorKeywords[i]);
-          const ctx = canvas.getContext('2d');
-
           ctx.fillStyle = cssColorKeywords[i];
-          ctx.fillRect(0, 0, 150, 150);
+          // start
+          ctx.fillRect(i + width, 0, width, 1000);
+
+          width += 6.8027210884;
 
         }
+
     </script>
   </body>
 </html>
