@@ -5,7 +5,8 @@
   <body>
     <a href=""></a>
     <br>
-    <canvas width="888" height="710" id="canvas"></canvas>
+    <!-- <canvas width="588" height="888" id="canvas"></canvas> -->
+    <canvas width="5400" height="7200" id="canvas"></canvas>
     
     <script>
       const cssColorKeywords = [
@@ -173,12 +174,28 @@
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
 
-        const width = 6;
+        // const width = 6;
+        // for (let i = 0; i < cssColorKeywords.length; i++) {
+
+        //   ctx.fillStyle = cssColorKeywords[i];
+        //   const startX = width * i;
+        //   ctx.fillRect(startX, 0, width, 710);
+
+        // }
+
+        // Generate 18" x 24" poster images
+        // 300 dpi
+        // Canvas Width: 5400
+        // Canvas Height: 7200
+        // Stripe height: 48
+        // Stripe width for backside: 900
+
+        const height = 48;
         for (let i = 0; i < cssColorKeywords.length; i++) {
 
           ctx.fillStyle = cssColorKeywords[i];
-          const startX = width * i;
-          ctx.fillRect(startX, 0, width, 710);
+          const startY = height * i;
+          ctx.fillRect(0, startY, 900, height);
 
         }
 
